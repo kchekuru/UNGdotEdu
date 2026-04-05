@@ -1,0 +1,10 @@
+*.out
+*.pt
+!trained-model/*.pt
+processed_data/
+__pycache__/
+.venv/
+venv/
+.python-version
+.pytest_cache/
+.mypy_cache/

@@ -1,0 +1,16 @@
+--index-url https://download.pytorch.org/whl/cu124
+--extra-index-url https://pypi.org/simple
+
+# Core GPU stack pinned for CUDA 12.4-compatible nodes
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+torchaudio==2.6.0+cu124
+
+# Project dependencies
+torch-geometric==2.7.0
+ase==3.28.0
+scikit-learn==1.8.0
+tqdm==4.67.3
+numpy==2.4.3
+scipy==1.17.1
+matplotlib==3.10.8

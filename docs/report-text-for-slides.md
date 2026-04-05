@@ -1,0 +1,5 @@
+**Report-ready summary**
+I first trained a baseline GNN and observed poor performance (`Final Test MSE = 1.848888`) with unintended CPU fallback due to Torch/CUDA incompatibility. 
+I fixed the environment by installing a CUDA-compatible PyTorch stack and enforcing GPU usage during training. We then resolved SLURM environment propagation issues and checkpoint race conditions across parallel jobs by using explicit export flags and unique run-tag artifact paths. 
+Next, I ran a structured hyperparameter sweep over depth, hidden size, dropout, and learning rate. The best configuration used 2 GNN layers, hidden size 320, dropout 0.05, learning rate `2e-4`, and early stopping controls (`LR_PATIENCE=8`, `EARLY_STOP_PATIENCE=20`). 
+The final full run achieved `Final Test MSE = 1.076123`, improving over baseline by about `41.8%`. This confirms that environment correctness plus targeted tuning significantly improved model.

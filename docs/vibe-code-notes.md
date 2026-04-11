@@ -21,17 +21,7 @@ sbatch --export=ALL,RUN_TAG=final_best,RESUME=0,NUM_LAYERS=2,HIDDEN_CHANNELS=320
 --
 cp -n best_charge_gcn_final_best.pt model_final_best.pt
 cp -n last_charge_gcn_final_best.pt model_final_best_resume.pt
--- safe resume training template --
-sbatch --export=ALL,\
-RUN_TAG=<new_tag>,\
-RESUME=1,\
-NUM_LAYERS=2,\
-HIDDEN_CHANNELS=320,\
-DROPOUT=0.05,\
-LR=<new_lr>,\
-NUM_EPOCHS=<total_epochs>,\
-LR_PATIENCE=12,\
-EARLY_STOP_PATIENCE=30,\
-CHECKPOINT_PATH=<matching_last_checkpoint.pt>,\
-BEST_MODEL_PATH=<new_best_output.pt> \
-train.slurm
+-- 
+-- uploading model to hugging face to main w/o pull request on hugging face repo--
+hf upload kchek2546/UNGdotEdu1 trained-model/model_final_best.pt model_final_best.pt
+hf upload kchek2546/UNGdotEdu1 trained-model/model_final_best.config.json model_final_best.config.json

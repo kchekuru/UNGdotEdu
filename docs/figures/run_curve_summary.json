@@ -1,0 +1,30 @@
+{
+  "runA": {
+    "epochs_logged": 99,
+    "best_val_mse": 1.258186,
+    "best_epoch": 79,
+    "final_train_mse_logged": 1.06741,
+    "final_val_mse_logged": 1.285875
+  },
+  "runB": {
+    "epochs_logged": 120,
+    "best_val_mse": 1.236962,
+    "best_epoch": 102,
+    "final_train_mse_logged": 1.092356,
+    "final_val_mse_logged": 1.286869
+  },
+  "runC": {
+    "epochs_logged": 99,
+    "best_val_mse": 1.250467,
+    "best_epoch": 79,
+    "final_train_mse_logged": 1.074276,
+    "final_val_mse_logged": 1.268491
+  },
+  "final_best": {
+    "epochs_logged": 120,
+    "best_val_mse": 1.225032,
+    "best_epoch": 102,
+    "final_train_mse_logged": 1.092832,
+    "final_val_mse_logged": 1.29412
+  }
+}
